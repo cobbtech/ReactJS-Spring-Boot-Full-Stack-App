@@ -24,7 +24,7 @@ import java.util.Set;
 
 @RestController
 @RequestMapping("/hobbies")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "http://52.73.27.44:4200")
 public class HobbyController {
     private final HobbyService hobbyService;
     private final CategoryService categoryService;

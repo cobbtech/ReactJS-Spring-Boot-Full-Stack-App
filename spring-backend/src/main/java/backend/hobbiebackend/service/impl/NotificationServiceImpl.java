@@ -22,7 +22,7 @@ public class NotificationServiceImpl implements NotificationService {
     @Override
     public void sendNotification(UserEntity userEntity) {
         SimpleMailMessage mail = new SimpleMailMessage();
-        String mailBody = "http://localhost:4200/password/" + userEntity.getId();
+        String mailBody = "http://52.73.27.44:4200/password/" + userEntity.getId();
         mail.setTo(userEntity.getEmail());
         mail.setFrom("findyourhobbie@gmail.com");
         mail.setSubject("Change your password");

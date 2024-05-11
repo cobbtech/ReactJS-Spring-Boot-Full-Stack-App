@@ -32,7 +32,7 @@ import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "http://52.73.27.44:4200")
 public class UserController {
     private final UserService userService;
     private final PasswordEncoder passwordEncoder;
@@ -163,7 +163,7 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "http://52.73.27.44:4200")
     @Operation(summary = "Login based on user role after authentication", security = @SecurityRequirement(name = "bearerAuth"))
     public String logInUser(@RequestParam String username) {
         UserEntity userByUsername = this.userService.findUserByUsername(username);
